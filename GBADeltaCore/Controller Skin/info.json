@@ -8,7 +8,8 @@
       "standard": {
         "portrait": {
           "assets": {
-            "resizable": "iphone-portrait.pdf"
+            "resizable": "iphone-portrait.pdf",
+            "preview": "iphone-portrait-preview.png"
           },
           "items": [
             {
@@ -166,7 +167,7 @@
               },
               "outputFrame": {
                 "x": 12,
-                "y": 72,
+                "y": 42,
                 "width": 390,
                 "height": 260
               }
@@ -185,7 +186,8 @@
         },
         "landscape": {
           "assets": {
-            "resizable": "iphone-landscape.pdf"
+            "resizable": "iphone-landscape.pdf",
+            "preview": "iphone-landscape-preview.png"
           },
           "items": [
             {
@@ -364,7 +366,8 @@
       "edgeToEdge": {
         "portrait": {
           "assets": {
-            "resizable": "iphone-e2e-portrait.pdf"
+            "resizable": "iphone-e2e-portrait.pdf",
+            "preview": "iphone-portrait-preview.png"
           },
           "items": [
             {
@@ -522,7 +525,7 @@
               },
               "outputFrame": {
                 "x": 12,
-                "y": 140,
+                "y": 100,
                 "width": 390,
                 "height": 260
               }
@@ -541,7 +544,8 @@
         },
         "landscape": {
           "assets": {
-            "resizable": "iphone-e2e-landscape.pdf"
+            "resizable": "iphone-e2e-landscape.pdf",
+            "preview": "iphone-landscape-preview.png"
           },
           "items": [
             {
@@ -722,7 +726,8 @@
       "standard": {
         "portrait": {
           "assets": {
-            "resizable": "ipad-portrait.pdf"
+            "resizable": "ipad-portrait.pdf",
+            "preview": "ipad-preview.png"
           },
           "items": [
             {
@@ -899,7 +904,8 @@
         },
         "landscape": {
           "assets": {
-            "resizable": "ipad-landscape.pdf"
+            "resizable": "ipad-landscape.pdf",
+            "preview": "ipad-preview.png"
           },
           "items": [
             {
