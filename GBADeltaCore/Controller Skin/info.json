@@ -9,7 +9,7 @@
         "portrait": {
           "assets": {
             "resizable": "iphone-portrait.pdf",
-            "preview": "iphone-portrait-preview.png"
+            "preview": "iphone-portrait-preview@2x.png"
           },
           "items": [
             {
@@ -187,7 +187,7 @@
         "landscape": {
           "assets": {
             "resizable": "iphone-landscape.pdf",
-            "preview": "iphone-landscape-preview.png"
+            "preview": "iphone-landscape-preview@2x.png"
           },
           "items": [
             {
@@ -367,7 +367,7 @@
         "portrait": {
           "assets": {
             "resizable": "iphone-e2e-portrait.pdf",
-            "preview": "iphone-portrait-preview.png"
+            "preview": "iphone-portrait-preview@2x.png"
           },
           "items": [
             {
@@ -545,7 +545,7 @@
         "landscape": {
           "assets": {
             "resizable": "iphone-e2e-landscape.pdf",
-            "preview": "iphone-landscape-preview.png"
+            "preview": "iphone-landscape-preview@2x.png"
           },
           "items": [
             {
@@ -727,7 +727,7 @@
         "portrait": {
           "assets": {
             "resizable": "ipad-portrait.pdf",
-            "preview": "ipad-preview.png"
+            "preview": "ipad-preview@2x.png"
           },
           "items": [
             {
@@ -905,7 +905,7 @@
         "landscape": {
           "assets": {
             "resizable": "ipad-landscape.pdf",
-            "preview": "ipad-preview.png"
+            "preview": "ipad-preview@2x.png"
           },
           "items": [
             {
