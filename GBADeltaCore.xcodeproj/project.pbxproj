@@ -234,7 +234,7 @@
 		BF917D2422261A9B00901726 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF917D2322261A9B00901726 /* CoreMotion.framework */; };
 		BFBFF3471EB5BB6A005D9792 /* vba-over.ini in Resources */ = {isa = PBXBuildFile; fileRef = BF28805D1EB592A70027FC53 /* vba-over.ini */; };
 		BFD5EB0F1D304D21001487DC /* GBATypes.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD5EB0E1D304D21001487DC /* GBATypes.m */; };
-		BFD5EB231D305B48001487DC /* Standard.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = BFD5EB221D305B48001487DC /* Standard.deltaskin */; };
+		BFD5EB231D305B48001487DC /* Standard.ignitedskin in Resources */ = {isa = PBXBuildFile; fileRef = BFD5EB221D305B48001487DC /* Standard.ignitedskin */; };
 		BFE8E9CE1D010AF7009D623D /* GBADeltaCore.h in Headers */ = {isa = PBXBuildFile; fileRef = BFE8E9CD1D010AF7009D623D /* GBADeltaCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -557,7 +557,7 @@
 		BF7A908B1D02708700A3617D /* GBASoundDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBASoundDriver.h; sourceTree = "<group>"; };
 		BF917D2322261A9B00901726 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		BFD5EB0E1D304D21001487DC /* GBATypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBATypes.m; sourceTree = "<group>"; };
-		BFD5EB221D305B48001487DC /* Standard.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; name = Standard.deltaskin; path = "Controller Skin/Standard.deltaskin"; sourceTree = "<group>"; };
+		BFD5EB221D305B48001487DC /* Standard.ignitedskin */ = {isa = PBXFileReference; lastKnownFileType = file; name = Standard.ignitedskin; path = "Controller Skin/Standard.ignitedskin"; sourceTree = "<group>"; };
 		BFE8E9CA1D010AF7009D623D /* GBADeltaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GBADeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE8E9CD1D010AF7009D623D /* GBADeltaCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBADeltaCore.h; sourceTree = "<group>"; };
 		BFE8E9CF1D010AF7009D623D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -610,7 +610,7 @@
 			isa = PBXGroup;
 			children = (
 				BFE8E9CF1D010AF7009D623D /* Info.plist */,
-				BFD5EB221D305B48001487DC /* Standard.deltaskin */,
+				BFD5EB221D305B48001487DC /* Standard.ignitedskin */,
 				BF6424861F5CCC6600D6AB44 /* Standard.deltamapping */,
 				BF28805D1EB592A70027FC53 /* vba-over.ini */,
 			);
@@ -1344,7 +1344,7 @@
 				BFBFF3471EB5BB6A005D9792 /* vba-over.ini in Resources */,
 				BF2882E11EB596870027FC53 /* Vector2.inl in Resources */,
 				BF2882971EB596870027FC53 /* SoundFileFactory.inl in Resources */,
-				BFD5EB231D305B48001487DC /* Standard.deltaskin in Resources */,
+				BFD5EB231D305B48001487DC /* Standard.ignitedskin in Resources */,
 				BF2882D71EB596870027FC53 /* String.inl in Resources */,
 				BF2882A71EB596870027FC53 /* Glsl.inl in Resources */,
 				BF2882E31EB596870027FC53 /* Vector3.inl in Resources */,

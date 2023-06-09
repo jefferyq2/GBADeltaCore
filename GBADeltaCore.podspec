@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
   spec.public_header_files = "GBADeltaCore/Types/GBATypes.h", "GBADeltaCore/Bridge/GBAEmulatorBridge.h", "GBADeltaCore/GBADeltaCore.h"
   spec.header_mappings_dir = ""
   spec.resource_bundles = {
-    "GBADeltaCore" => ["GBADeltaCore/**/*.deltamapping", "GBADeltaCore/**/*.deltaskin", "visualboyadvance-m/src/vba-over.ini"]
+    "GBADeltaCore" => ["GBADeltaCore/**/*.deltamapping", "GBADeltaCore/**/*.ignitedskin", "visualboyadvance-m/src/vba-over.ini"]
   }
   
   spec.dependency 'DeltaCore'
