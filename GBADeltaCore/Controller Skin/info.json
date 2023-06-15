@@ -129,62 +129,6 @@
                 "width": 390,
                 "height": 260
               }
-            },
-            {
-              "inputFrame": {
-                "x": 0,
-                "y": 0,
-                "width": 240,
-                "height": 160
-              },
-              "filters": [
-                {
-                  "name": "CIAffineTransform",
-                  "parameters": {
-                    "inputTransform": {
-                      "scaleX": 3,
-                      "scaleY": 3
-                    }
-                  }
-                },
-                {
-                  "name": "CIGaussianBlur",
-                  "parameters": {
-                    "inputRadius": 20
-                  }
-                },
-                {
-                  "name": "CICrop",
-                  "parameters": {
-                    "inputRectangle": {
-                      "x": 285,
-                      "y": 60,
-                      "width": 270,
-                      "height": 480
-                    }
-                  }
-                }
-              ],
-              "outputFrame": {
-                "x": 0,
-                "y": 0,
-                "width": 414,
-                "height": 736
-              }
-            },
-            {
-              "inputFrame": {
-                "x": 0,
-                "y": 0,
-                "width": 240,
-                "height": 160
-              },
-              "outputFrame": {
-                "x": 12,
-                "y": 42,
-                "width": 390,
-                "height": 260
-              }
             }
           ],
           "mappingSize": {
@@ -308,48 +252,6 @@
             }
           ],
           "screens": [
-            {
-              "inputFrame": {
-                "x": 0,
-                "y": 0,
-                "width": 240,
-                "height": 160
-              },
-              "filters": [
-                {
-                  "name": "CIAffineTransform",
-                  "parameters": {
-                    "inputTransform": {
-                      "scaleX": 3,
-                      "scaleY": 3
-                    }
-                  }
-                },
-                {
-                  "name": "CIGaussianBlur",
-                  "parameters": {
-                    "inputRadius": 20
-                  }
-                },
-                {
-                  "name": "CICrop",
-                  "parameters": {
-                    "inputRectangle": {
-                      "x": 60,
-                      "y": 98,
-                      "width": 720,
-                      "height": 405
-                    }
-                  }
-                }
-              ],
-              "outputFrame": {
-                "x": 0,
-                "y": 0,
-                "width": 736,
-                "height": 414
-              }
-            },
             {
               "inputFrame": {
                 "x": 0,
@@ -501,62 +403,6 @@
                 "width": 390,
                 "height": 260
               }
-            },
-            {
-              "inputFrame": {
-                "x": 0,
-                "y": 0,
-                "width": 240,
-                "height": 160
-              },
-              "filters": [
-                {
-                  "name": "CIAffineTransform",
-                  "parameters": {
-                    "inputTransform": {
-                      "scaleX": 3,
-                      "scaleY": 3
-                    }
-                  }
-                },
-                {
-                  "name": "CIGaussianBlur",
-                  "parameters": {
-                    "inputRadius": 20
-                  }
-                },
-                {
-                  "name": "CICrop",
-                  "parameters": {
-                    "inputRectangle": {
-                      "x": 309,
-                      "y": 60,
-                      "width": 222,
-                      "height": 480
-                    }
-                  }
-                }
-              ],
-              "outputFrame": {
-                "x": 0,
-                "y": 0,
-                "width": 414,
-                "height": 896
-              }
-            },
-            {
-              "inputFrame": {
-                "x": 0,
-                "y": 0,
-                "width": 240,
-                "height": 160
-              },
-              "outputFrame": {
-                "x": 12,
-                "y": 100,
-                "width": 390,
-                "height": 260
-              }
             }
           ],
           "mappingSize": {
@@ -680,48 +526,6 @@
             }
           ],
           "screens": [
-            {
-              "inputFrame": {
-                "x": 0,
-                "y": 0,
-                "width": 240,
-                "height": 160
-              },
-              "filters": [
-                {
-                  "name": "CIAffineTransform",
-                  "parameters": {
-                    "inputTransform": {
-                      "scaleX": 3,
-                      "scaleY": 3
-                    }
-                  }
-                },
-                {
-                  "name": "CIGaussianBlur",
-                  "parameters": {
-                    "inputRadius": 20
-                  }
-                },
-                {
-                  "name": "CICrop",
-                  "parameters": {
-                    "inputRectangle": {
-                      "x": 60,
-                      "y": 133,
-                      "width": 720,
-                      "height": 333
-                    }
-                  }
-                }
-              ],
-              "outputFrame": {
-                "x": 0,
-                "y": 0,
-                "width": 896,
-                "height": 414
-              }
-            },
             {
               "inputFrame": {
                 "x": 0,
@@ -869,48 +673,6 @@
                 "width": 240,
                 "height": 160
               },
-              "filters": [
-                {
-                  "name": "CIAffineTransform",
-                  "parameters": {
-                    "inputTransform": {
-                      "scaleX": 3,
-                      "scaleY": 3
-                    }
-                  }
-                },
-                {
-                  "name": "CIGaussianBlur",
-                  "parameters": {
-                    "inputRadius": 20
-                  }
-                },
-                {
-                  "name": "CICrop",
-                  "parameters": {
-                    "inputRectangle": {
-                      "x": 240,
-                      "y": 60,
-                      "width": 360,
-                      "height": 480
-                    }
-                  }
-                }
-              ],
-              "outputFrame": {
-                "x": 0,
-                "y": 0,
-                "width": 768,
-                "height": 1024
-              }
-            },
-            {
-              "inputFrame": {
-                "x": 0,
-                "y": 0,
-                "width": 240,
-                "height": 160
-              },
               "outputFrame": {
                 "x": 24,
                 "y": 24,
@@ -1040,48 +802,6 @@
             }
           ],
           "screens": [
-            {
-              "inputFrame": {
-                "x": 0,
-                "y": 0,
-                "width": 240,
-                "height": 160
-              },
-              "filters": [
-                {
-                  "name": "CIAffineTransform",
-                  "parameters": {
-                    "inputTransform": {
-                      "scaleX": 3,
-                      "scaleY": 3
-                    }
-                  }
-                },
-                {
-                  "name": "CIGaussianBlur",
-                  "parameters": {
-                    "inputRadius": 20
-                  }
-                },
-                {
-                  "name": "CICrop",
-                  "parameters": {
-                    "inputRectangle": {
-                      "x": 100,
-                      "y": 60,
-                      "width": 640,
-                      "height": 480
-                    }
-                  }
-                }
-              ],
-              "outputFrame": {
-                "x": 0,
-                "y": 0,
-                "width": 1024,
-                "height": 768
-              }
-            },
             {
               "inputFrame": {
                 "x": 0,
