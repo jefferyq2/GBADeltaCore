@@ -9,7 +9,7 @@
         "portrait": {
           "assets": {
             "resizable": "iphone-portrait.pdf",
-            "preview": "iphone-portrait-preview@2x.png"
+            "preview": "iphone-portrait-preview.pdf"
           },
           "items": [
             {
@@ -140,12 +140,13 @@
             "bottom": 10,
             "left": 10,
             "right": 10
-          }
+          },
+          "backgroundBlur": true
         },
         "landscape": {
           "assets": {
             "resizable": "iphone-landscape.pdf",
-            "preview": "iphone-landscape-preview@2x.png"
+            "preview": "iphone-landscape-preview.pdf"
           },
           "items": [
             {
@@ -276,14 +277,15 @@
             "bottom": 10,
             "left": 10,
             "right": 10
-          }
+          },
+          "backgroundBlur": true
         }
       },
       "edgeToEdge": {
         "portrait": {
           "assets": {
             "resizable": "iphone-e2e-portrait.pdf",
-            "preview": "iphone-portrait-preview@2x.png"
+            "preview": "iphone-portrait-preview.pdf"
           },
           "items": [
             {
@@ -414,12 +416,13 @@
             "bottom": 10,
             "left": 10,
             "right": 10
-          }
+          },
+          "backgroundBlur": true
         },
         "landscape": {
           "assets": {
             "resizable": "iphone-e2e-landscape.pdf",
-            "preview": "iphone-landscape-preview@2x.png"
+            "preview": "iphone-landscape-preview.pdf"
           },
           "items": [
             {
@@ -550,7 +553,8 @@
             "bottom": 10,
             "left": 10,
             "right": 10
-          }
+          },
+          "backgroundBlur": true
         }
       }
     },
@@ -559,7 +563,7 @@
         "portrait": {
           "assets": {
             "resizable": "ipad-portrait.pdf",
-            "preview": "ipad-preview@2x.png"
+            "preview": "ipad-preview.pdf"
           },
           "items": [
             {
@@ -690,12 +694,13 @@
             "bottom": 10,
             "left": 10,
             "right": 10
-          }
+          },
+          "backgroundBlur": true
         },
         "landscape": {
           "assets": {
             "resizable": "ipad-landscape.pdf",
-            "preview": "ipad-preview@2x.png"
+            "preview": "ipad-preview.pdf"
           },
           "items": [
             {
@@ -826,13 +831,15 @@
             "bottom": 10,
             "left": 10,
             "right": 10
-          }
+          },
+          "backgroundBlur": true
         }
       },
       "splitView": {
         "portrait": {
           "assets": {
-            "resizable": "ipad-split-portrait.pdf"
+            "resizable": "ipad-split-portrait.pdf",
+            "preview": "ipad-preview.pdf"
           },
           "items": [
             {
@@ -947,11 +954,13 @@
             "bottom": 10,
             "left": 10,
             "right": 10
-          }
+          },
+          "backgroundBlur": true
         },
         "landscape": {
           "assets": {
-            "resizable": "ipad-split-landscape.pdf"
+            "resizable": "ipad-split-landscape.pdf",
+            "preview": "ipad-preview.pdf"
           },
           "items": [
             {
@@ -1066,7 +1075,8 @@
             "bottom": 10,
             "left": 10,
             "right": 10
-          }
+          },
+          "backgroundBlur": true
         }
       }
     }
