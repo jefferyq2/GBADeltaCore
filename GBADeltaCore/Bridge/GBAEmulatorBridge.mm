@@ -404,12 +404,6 @@ int  RGB_LOW_BITS_MASK;
     return (1.0 / 60.0);
 }
 
-#pragma mark - Palette -
-
-- (void)updatePalette
-{
-}
-
 @end
 
 #pragma mark - VBA-M -
