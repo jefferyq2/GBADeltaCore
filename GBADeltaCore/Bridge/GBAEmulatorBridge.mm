@@ -306,6 +306,7 @@ int  RGB_LOW_BITS_MASK;
 
 - (void)loadGameSaveFromURL:(NSURL *)URL
 {
+    truncate(URL.fileSystemRepresentation, 131072); // Remove possible mGBA footer data
     GBASystem.emuReadBattery(URL.fileSystemRepresentation);
 }
 
