@@ -306,7 +306,41 @@ int  RGB_LOW_BITS_MASK;
 
 - (void)loadGameSaveFromURL:(NSURL *)URL
 {
-    truncate(URL.fileSystemRepresentation, 131072); // Remove possible mGBA footer data
+    // Get battery save file size
+    FILE *saveFile = fopen(URL.fileSystemRepresentation, "r");
+    
+    if (saveFile == NULL || fseek(saveFile, 0, SEEK_END) < 0) {
+        return;
+    }
+    
+    long saveFileSize = ftell(saveFile);
+    fclose(saveFile);
+    
+    switch (saveFileSize)  // Ensure correct file sizes if last saved on mGBA
+    {
+        case 512 ... 8191: // 4K EEPROM (512 Bytes)
+            truncate(URL.fileSystemRepresentation, 512);
+            break;
+            
+        case 8192 ... 32767: // 64K EEPROM (8 KiB / 8192 Bytes)
+            truncate(URL.fileSystemRepresentation, 8192);
+            break;
+            
+        case 32768 ... 65535: // 256K SRAM/FRAM (32 KiB / 32768 Bytes)
+            truncate(URL.fileSystemRepresentation, 32768);
+            break;
+            
+        case 65536 ... 131071: // 512K FLASH (64 KiB / 65536 Bytes)
+            truncate(URL.fileSystemRepresentation, 65536);
+            break;
+            
+        case 131072 ... 262144: // 1M FLASH (128 KiB / 131072 Bytes)
+            truncate(URL.fileSystemRepresentation, 131072);
+            break;
+            
+        default: break;
+    }
+    
     GBASystem.emuReadBattery(URL.fileSystemRepresentation);
 }
 
