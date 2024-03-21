@@ -52,6 +52,7 @@ int  RGB_LOW_BITS_MASK;
 @interface GBAEmulatorBridge ()
 
 @property (nonatomic, copy, nullable, readwrite) NSURL *gameURL;
+@property (nonatomic, copy, nonnull, readonly) NSURL *gameSaveDirectory;
 
 @property (assign, nonatomic, getter=isFrameReady) BOOL frameReady;
 
@@ -82,6 +83,8 @@ int  RGB_LOW_BITS_MASK;
     self = [super init];
     if (self)
     {
+        _gameSaveDirectory = [NSURL fileURLWithPath:NSTemporaryDirectory() isDirectory:YES];
+        
         _motionManager = [[CMMotionManager alloc] init];
     }
     
@@ -306,42 +309,49 @@ int  RGB_LOW_BITS_MASK;
 
 - (void)loadGameSaveFromURL:(NSURL *)URL
 {
-    // Get battery save file size
-    FILE *saveFile = fopen(URL.fileSystemRepresentation, "r");
+    // Copy save to temporary directory before trimming
+    NSString *gameFilename = self.gameURL.lastPathComponent.stringByDeletingPathExtension;
+    NSURL *temporarySaveURL = [self.gameSaveDirectory URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sav2", gameFilename]];
     
-    if (saveFile == NULL || fseek(saveFile, 0, SEEK_END) < 0) {
-        return;
-    }
-    
-    long saveFileSize = ftell(saveFile);
-    fclose(saveFile);
-    
-    switch (saveFileSize)  // Ensure correct file sizes if last saved on mGBA
+    if ([self safelyCopyFileAtURL:URL toURL:temporarySaveURL])
     {
-        case 512 ... 8191: // 4K EEPROM (512 Bytes)
-            truncate(URL.fileSystemRepresentation, 512);
-            break;
-            
-        case 8192 ... 32767: // 64K EEPROM (8 KiB / 8192 Bytes)
-            truncate(URL.fileSystemRepresentation, 8192);
-            break;
-            
-        case 32768 ... 65535: // 256K SRAM/FRAM (32 KiB / 32768 Bytes)
-            truncate(URL.fileSystemRepresentation, 32768);
-            break;
-            
-        case 65536 ... 131071: // 512K FLASH (64 KiB / 65536 Bytes)
-            truncate(URL.fileSystemRepresentation, 65536);
-            break;
-            
-        case 131072 ... 262144: // 1M FLASH (128 KiB / 131072 Bytes)
-            truncate(URL.fileSystemRepresentation, 131072);
-            break;
-            
-        default: break;
+        // Get battery save file size
+        FILE *saveFile = fopen(temporarySaveURL.fileSystemRepresentation, "r");
+        
+        if (saveFile == NULL || fseek(saveFile, 0, SEEK_END) < 0) {
+            return;
+        }
+        
+        long saveFileSize = ftell(saveFile);
+        fclose(saveFile);
+        
+        switch (saveFileSize)  // Ensure correct file sizes if last saved on mGBA
+        {
+            case 512 ... 8191: // 4K EEPROM (512 Bytes)
+                truncate(temporarySaveURL.fileSystemRepresentation, 512);
+                break;
+                
+            case 8192 ... 32767: // 64K EEPROM (8 KiB / 8192 Bytes)
+                truncate(temporarySaveURL.fileSystemRepresentation, 8192);
+                break;
+                
+            case 32768 ... 65535: // 256K SRAM/FRAM (32 KiB / 32768 Bytes)
+                truncate(temporarySaveURL.fileSystemRepresentation, 32768);
+                break;
+                
+            case 65536 ... 131071: // 512K FLASH (64 KiB / 65536 Bytes)
+                truncate(temporarySaveURL.fileSystemRepresentation, 65536);
+                break;
+                
+            case 131072 ... 262144: // 1M FLASH (128 KiB / 131072 Bytes)
+                truncate(temporarySaveURL.fileSystemRepresentation, 131072);
+                break;
+                
+            default: break;
+        }
+        
+        GBASystem.emuReadBattery(temporarySaveURL.fileSystemRepresentation);
     }
-    
-    GBASystem.emuReadBattery(URL.fileSystemRepresentation);
 }
 
 #pragma mark - Save States -
@@ -404,6 +414,33 @@ int  RGB_LOW_BITS_MASK;
 - (void)updateCheats
 {
     
+}
+
+
+
+#pragma mark - Private -
+
+- (BOOL)safelyCopyFileAtURL:(NSURL *)URL toURL:(NSURL *)destinationURL
+{
+    NSError *error = nil;
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:destinationURL.path])
+    {
+        if (![[NSFileManager defaultManager] removeItemAtPath:destinationURL.path error:&error])
+        {
+            NSLog(@"%@", error);
+            return NO;
+        }
+    }
+    
+    // Copy saves to ensure data is never lost.
+    if (![[NSFileManager defaultManager] copyItemAtURL:URL toURL:destinationURL error:&error])
+    {
+        NSLog(@"%@", error);
+        return NO;
+    }
+    
+    return YES;
 }
 
 #pragma mark - Gyroscope -
