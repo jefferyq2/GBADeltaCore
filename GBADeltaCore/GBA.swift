@@ -40,7 +40,7 @@ public struct GBA: DeltaCoreProtocol
     public static let core = GBA()
     
     public var name: String { "GBADeltaCore" }
-    public var identifier: String { "com.rileytestut.GBADeltaCore" }
+    public var identifier: String { "com.litritt.GBADeltaCore" }
     
     public var gameType: GameType { GameType.gba }
     public var gameInputType: Input.Type { GBAGameInput.self }

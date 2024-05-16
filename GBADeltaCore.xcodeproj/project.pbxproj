@@ -551,7 +551,7 @@
 		BF2884201EB5B8F70027FC53 /* BreakpointStructures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BreakpointStructures.h; sourceTree = "<group>"; };
 		BF2884221EB5B93A0027FC53 /* remote.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = remote.cpp; sourceTree = "<group>"; };
 		BF2884231EB5B93A0027FC53 /* remote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = remote.h; sourceTree = "<group>"; };
-		BF6424861F5CCC6600D6AB44 /* Standard.deltamapping */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Standard.deltamapping; sourceTree = "<group>"; };
+		BF6424861F5CCC6600D6AB44 /* Standard.deltamapping */ = {isa = PBXFileReference; explicitFileType = file.bplist; path = Standard.deltamapping; sourceTree = "<group>"; };
 		BF69FBC023E39E420051BEEA /* GBATypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBATypes.h; sourceTree = "<group>"; };
 		BF7A908A1D02708700A3617D /* GBASoundDriver.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GBASoundDriver.mm; sourceTree = "<group>"; };
 		BF7A908B1D02708700A3617D /* GBASoundDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBASoundDriver.h; sourceTree = "<group>"; };
@@ -1665,7 +1665,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rileytestut.GBADeltaCore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litritt.GBADeltaCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1687,7 +1687,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rileytestut.GBADeltaCore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litritt.GBADeltaCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

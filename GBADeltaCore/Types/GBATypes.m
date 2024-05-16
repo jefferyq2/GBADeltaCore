@@ -8,7 +8,7 @@
 
 #import "GBATypes.h"
 
-GameType const GameTypeGBA = @"com.rileytestut.delta.game.gba";
+GameType const GameTypeGBA = @"com.litritt.ignited.game.gba";
 
 CheatType const CheatTypeActionReplay = @"ActionReplay";
 CheatType const CheatTypeGameShark = @"GameShark";
